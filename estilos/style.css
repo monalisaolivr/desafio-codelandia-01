@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+:root {
+    --blue: #3EA1DB;
+    --blue-dark: #574AE8;
+    --white: #FFF;
+
+    --title: #313131;
+    --text: #989898;
+
+    --favorite: url('../icons/outline_favorite_black_24dp.png');
+}
+
+@keyframes linear {
+    0% {background-color: #574AE8;}
+    100% {background-color: #3EA1DB;}
+}
+
+@font-face {
+    font-family: lexend;
+    src: url('../fontes/LexendDeca-Regular.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*corpo da página*/
+
+body {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: var(--white);
+    font-family: lexend;
+}
+
+/*cabeçalho*/
+
+header {
+    color: var(--white);
+    padding: 40px 20px;
+    animation-name: linear;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/*layout cabeçalho*/
+
+#cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: context-menu;
+} 
+
+h1 {
+    font-size: 1.1em;
+}
+
+/* caixa de busca*/
+
+div#input-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(255, 255, 255, 0.249);
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+/*ícone da caixa de busca*/
+
+i#search-icone {
+    font-variation-settings:'FILL' 0,'wght' 100,'GRAD' 200,'opsz' 20;
+    padding-left: 15px;
+}
+
+/*entrada de busca*/
+
+input#busca{
+    width: 80vw;
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--white);
+    
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+}
+
+input#busca:hover {
+    border: 1px solid #ffffff47;
+}
+
+/*texto de espaço reservado da entrada de busca*/
+
+input#busca::placeholder {
+    color: rgba(255, 255, 255, 0.434);
+    font-size: 13px;
+}
+
+/*seção principal do corpo*/
+
+section {
+    text-align: justify;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.155);
+
+    margin: 20px;
+    padding: 12px;
+
+    transition: 0.2s;
+}
+
+section:hover{
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.429);
+    margin: 22px;
+    padding: 14px;
+    transition-timing-function: linear;
+} 
+
+p.container{
+    color: var(--text);
+    font-size: 13px;
+}
+
+/*ícone favorite*/
+
+div.icone{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    transition: 0.1;
+}
+
+div > i.material-symbols-outlined:hover{
+    background-image: var(--favorite);
+    font-size: 1.6em;
+    color: rgba(255, 0, 0, 0.249);
+    cursor: pointer;
+    transition-timing-function: linear;
+}
+
+main > section > h2 {
+    font-size: 19px;
+    font-weight: lighter;
+    margin: 25px 0px;
+}

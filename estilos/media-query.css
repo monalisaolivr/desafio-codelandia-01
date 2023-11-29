@@ -1,0 +1,22 @@
+@media screen and (min-width:768px){
+    /*layout do cabeçalho*/
+    #cabecalho {
+        justify-content: space-around;
+    }
+
+    /*exibição da caixa de busca*/
+    div#input-search{
+        display: inline-flex;
+    }
+
+    /*largura da entrada de busca*/
+    input#busca{
+        width: 49vw;
+    }
+
+    /*layout principal*/
+    main {
+        display: inline-table;
+        width: 55vw;
+    }
+}
